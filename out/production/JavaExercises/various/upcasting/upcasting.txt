@@ -1,0 +1,16 @@
+Dziedziczenie (inheritance) - to istotny koncept programowania obiektowego (OOP). To mechanizm dzięki któremu
+jedna klasa jest w stanie odziedziczyć ficzery (fields, methods) innej klasy.
+
+
+Istnieją dwa sposoby inicjalizowania obiektów podczas dziedziczenia ficzerów klasy parent albo child:
+
+    1) Child c = new Child(), w tym przypadku obiekt 'c' ma dostęp do:
+     * w klasie Parent - do wszystkich memberów
+     * w klasie Child - do wszystkich memberów
+
+    2) Parent p = new Child(), w tym przypadku obiekt 'p' ma dostęp do:
+     * w klasie Parent - do wszystkich memberów
+     * w klasie Child - tylko do metod nadpisujących
+
+--------------
+https://www.geeksforgeeks.org/upcasting-in-java-with-examples/
