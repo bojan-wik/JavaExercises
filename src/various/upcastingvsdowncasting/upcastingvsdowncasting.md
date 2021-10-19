@@ -13,7 +13,7 @@ Stąd też typecasting obiektów występuje tylko w dwóch wersjach:
 **Upcasting**:
     a) może być zrobiony domyślnie (implicitly),
     b) daje możliwość dostępu do memberów parent-class
-    c) jednocześnie niemożliwy jest dostęp do wszystkich memberów child-class, tylko do wyszczególnionych
+    c) jednocześnie niemożliwy jest dostęp do wszystkich memberów child-class, tylko do wyszczególnionych np. nadpisanych metod
 
 **Downcasting**:
     a) nie może być zrobiony domyślnie (implicitly), tylko na wyraźne polecenie (explicitly)
