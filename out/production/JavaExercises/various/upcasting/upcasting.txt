@@ -12,5 +12,8 @@ Istnieją dwa sposoby inicjalizowania obiektów podczas dziedziczenia ficzerów 
      * w klasie Parent - do wszystkich memberów
      * w klasie Child - tylko do metod nadpisujących
 
+Dlatego mogę wywnioskować, że głównym celem użycia jednego sposobu, albo drugiego jest uzyskanie różnych poziomów dostępu
+do odpowiednich memberów w danych klasach.
+
 --------------
 https://www.geeksforgeeks.org/upcasting-in-java-with-examples/
