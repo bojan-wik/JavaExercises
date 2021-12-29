@@ -3,7 +3,6 @@ package edabit.basiccalculator;
 public class BasicCalculator {
 
     public static int calculator(int num1, char operator, int num2) {
-
         int calculationResult = 0;
         switch(operator) {
             case '+':
