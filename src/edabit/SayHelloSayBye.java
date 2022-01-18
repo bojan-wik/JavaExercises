@@ -19,6 +19,6 @@ public class SayHelloSayBye {
     }
 
     public static void main(String[] args) {
-        System.out.println(sayHelloBye("Wiktor", 1));
+        System.out.println(sayHelloBye("wiktor", 1));
     }
 }
