@@ -1,7 +1,6 @@
 package edabit;
 
 import java.util.Arrays;
-import java.util.HashSet;
 
 /**
  * https://edabit.com/challenge/AYQPBDjDbrrvJtjjc
