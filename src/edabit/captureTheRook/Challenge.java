@@ -4,10 +4,7 @@ public class Challenge {
 
     private static boolean isInputValid(String[] rooks) {
         String regex = "^[a-hA-H][1-8]$";
-        if (rooks.length == 2) {
-            return rooks[0].matches(regex) && rooks[1].matches(regex);
-        }
-        return false;
+        return rooks.length == 2 && (rooks[0].matches(regex) && rooks[1].matches(regex));
     }
 
     public static boolean canCapture(String[] rooks) {
