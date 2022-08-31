@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class ChallengeTests {
-    //test
     @Test
     public void test0() {
         assertEquals(Program.changeEnough(new int[] {50, 100, 60}, 5), false);
