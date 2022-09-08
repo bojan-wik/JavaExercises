@@ -1,37 +1,63 @@
 package edabit.stateNamesAndAbbreviations;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class Challenge {
 
-    public static String[] filterStateNames(String[] array, String parameter) {
+    public static void main(String[] args) {
+        filterStateNames(new String[]{"Arizona", "CA", "NY", "Nevada"}, "abb");
+    }
 
-        ArrayList<String> filteredArrayList = new ArrayList<>();
+    /**
+     * z użyciem stream()
+     */
+    public static String[] filterStateNames(String[] array, String parameter) {
+        Stream<String> streamArray = Arrays.stream(array);
+        String[] filteredArray;
         switch(parameter) {
             case "abb":
-                for (String element : array) {
-                    if (element.length() <= 2) {
-                        filteredArrayList.add(element);
-                    }
-                }
+                filteredArray = streamArray.filter(element -> element.length() <= 2).toArray(String[]::new);
                 break;
             case "full":
-                for (String element : array) {
-                    if (element.length() > 2) {
-                        filteredArrayList.add(element);
-                    }
-                }
+                filteredArray = streamArray.filter(element -> element.length() > 2).toArray(String[]::new);
                 break;
             default:
                 throw new IllegalStateException("Invalid 2nd parameter");
         }
-
-        return filteredArrayList.toArray(new String[filteredArrayList.size()]);
+        return filteredArray;
     }
 
-    // TODO: 06.09.2022 da się to jeszcze jakoś skrócić/zoptymalizować?
-    // TODO: 06.09.2022 napisać drugą metodę z wykorzystaniem stream()
+    /**
+     * z użyciem ArrayList
+     */
+//    public static String[] filterStateNames(String[] array, String parameter) {
+//        ArrayList<String> filteredArrayList = new ArrayList<>();
+//        switch(parameter) {
+//            case "abb":
+//                for (String element : array) {
+//                    if (element.length() <= 2) {
+//                        filteredArrayList.add(element);
+//                    }
+//                }
+//                break;
+//            case "full":
+//                for (String element : array) {
+//                    if (element.length() > 2) {
+//                        filteredArrayList.add(element);
+//                    }
+//                }
+//                break;
+//            default:
+//                throw new IllegalStateException("Invalid 2nd parameter");
+//        }
+//        return filteredArrayList.toArray(new String[filteredArrayList.size()]);
+//    }
 
+    /**
+     * z użyciem Array, ale chyba się nie da/nie ma sensu
+     */
 //    public static String[] filterStateNames1(String[] array, String parameter) {
 //
 //        String[] filteredArray;

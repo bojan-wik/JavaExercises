@@ -6,6 +6,11 @@ import static org.junit.Assert.assertThat;
 
 public class ChallengeTests {
 
+    @Test(expected = IllegalStateException.class)
+    public void test0() {
+        Challenge.filterStateNames(new String[]{"Arizona", "CA", "NY", "Nevada"}, "dupa");
+    }
+
     @Test
     public void test1() {
         assertThat(Challenge.filterStateNames(new String[]{"Arizona", "CA", "NY", "Nevada"}, "abb"), is(new String[]{"CA", "NY"}));
