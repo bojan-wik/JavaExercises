@@ -13,4 +13,9 @@ public class BowlingGameTest {
     public void testTwo(){
 
     }
+
+    @Test
+    public void lisaTestFour() {
+
+    }
 }
